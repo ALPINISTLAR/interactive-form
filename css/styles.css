@@ -367,19 +367,6 @@ select:valid ~ .success-message {
   position: relative;
 }
 
-.parallax-content {
-  background-color: rgba(0, 0, 0, 0.4);
-  padding: 1rem 2rem;
-  border-radius: 12px;
-  max-width: 600px;
-  margin: 0 20px;
-}
-
-.parallax-content h2 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-}
-
 /* Content Section */
 .content-section {
   padding: 70px 0;
@@ -434,7 +421,20 @@ select:valid ~ .success-message {
 .card p{
   max-width: 250px;
 }
+/* CTA */
+.cta-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.cta-container p {
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+  max-width: 600px;
+  text-align: center;
+}
 
+/* FOOTER */
 .footer {
   padding-top: 70px;
   padding-bottom: 70px;
