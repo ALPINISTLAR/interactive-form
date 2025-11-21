@@ -528,3 +528,9 @@ select:valid ~ .success-message {
     flex-direction: column;
   }
 }
+/* REDUCE */
+@media (prefers-reduced-motion: reduce) {
+  .parallax-section {
+    background-attachment: scroll;
+  }
+}
