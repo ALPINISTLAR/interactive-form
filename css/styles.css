@@ -1,13 +1,16 @@
 :root {
-  --primary-color: #0d9494;
-  --secondary-color: rgb(12, 142, 142);
-  --accent-color: rgb(35, 178, 178);
+  --primary-color: #004fa4;
+  --secondary-color: #0068d5;
+  --accent-color: #005dc7;
   --error-color: #e74c3c;
   --success-color: #2ecc71;
   --text-color: #333;
   --light-bg: #f5f7fa;
   --shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  --strong-gradient: linear-gradient(90deg, #0d9494, #5cc4c4, #076e6e, #77b8b8);
+  --strong-gradient: linear-gradient(90deg, #002855, #004fa4,#1e6fd9, #4d9fff, #7bb8ff, #4d9fff, #1e6fd9, #004fa4,
+  #002855
+  );
+  --gradient: linear-gradient(90deg, #004fa4, #407cbc, #065fbf, #3f80c6);
 }
 /* ** GLOBAL STYLES ** */
 html
@@ -111,11 +114,14 @@ header {
   font-weight: bold;
   text-decoration: none;
   transition: all 0.4s ease;
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  color: transparent;
 }
 .logo:hover{
   background: var(--strong-gradient);
   background-size: 400% 400%;
-  animation: strongGradient 2.5s linear infinite;
+  animation: strongGradient 1.5s linear infinite;
   -webkit-background-clip: text;
   color: transparent;
 }
@@ -348,6 +354,31 @@ select:valid ~ .success-message {
   transform: translateY(0);
 }
 
+/* PARALLAX */
+.parallax-section {
+  height: 60vh;
+  background: url('https://t4.ftcdn.net/jpg/02/32/92/55/360_F_232925587_st4gM8b3TJHtjjddCIUNyVyFJmZqMmn4.jpg') no-repeat center center/cover;
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  position: relative;
+}
+
+.parallax-content {
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 1rem 2rem;
+  border-radius: 12px;
+  max-width: 600px;
+  margin: 0 20px;
+}
+
+.parallax-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
 
 /* KEYFRAMES */
 @keyframes strongGradient {
